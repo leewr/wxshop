@@ -1,0 +1,83 @@
+<!--detail.wxml-->
+<view class="settle">
+  	<navigator  url="../address/address" class="newaddress">
+		<view class="label"><text class="addicon">+</text><text class="text">新增收货地址</text></view>
+  	</navigator>
+  	<view class="order-detail">
+		<view class="title">云创同官方旗舰店</view>
+		<view class="order-pro">
+			<image src="{{detailData.imgUrls[0]}}" class="proimage"/>
+			<view class="title-wrap">
+				<view class="title-text">新款云创同X7创客智能微信营销手机</view>
+				<text class="title-price">￥3680</text>
+			</view>
+		</view>
+		<!-- <view class="number">
+			<view class="">
+				<view class="label">数量</view>
+				<view class="oprnum">
+					<text class="reduce forbid" bindtap="reduceNum">-</text>
+					<text class="curnum">{{buynum}}</text>
+					<text class="plus" bindtap="plusNum">+</text>
+				</view>
+			</view>
+		</view> -->
+		<view class="freight">
+			<view class="freight-item">
+				<view class="label">配送方式</view>
+				<view class="freight-type">
+					<view>免运费</view>
+					<view>快递发货</view>
+				</view>
+			</view>
+			<view class="freight-item">
+				<label class="message">
+					<view class="label">买家留言:</view>
+					<input class="input" type="text" placeholder="点击给商家留言" />
+				</label>
+			</view>
+			<view class="freight-item">
+				<label class="message">
+					<view class="label">合计</view>
+					<text class="price">￥25.00</text>
+				</label>
+			</view>
+		</view>
+
+  	</view>
+  	<view class="list discount">
+	  	<view class=" list-item">
+			<text class="label">优惠</text>
+			<text class="arrawtext">
+				<text>使用优惠</text>
+				<text class="arraw"></text>
+			</text>
+		</view>
+	</view>
+	<view class="list messagenotice">
+		<view class="list-item">
+			<text class="label">短信通知收件人</text>
+			<switch checked class="mesnotswitch"/>
+		</view>
+	</view>
+	<view class="acount list">
+		<view class="">
+			<label>商品金额</label>
+			<text class="fr">￥45.80</text>
+		</view>
+		<view class="">
+			<label>运费</label>
+			<text class="fr">+￥0.00</text>
+		</view>
+	</view>
+	<view class="support">
+		<view class="">提供技术支持</view>
+	</view>
+	<view class="total">
+		<view class="totlebtn">
+			提交订单
+		</view>
+		<text class="totalprice fr">合计:<text class="num">￥45.80</text></text>
+	</view>
+
+</view>

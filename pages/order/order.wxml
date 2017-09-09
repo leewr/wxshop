@@ -1,0 +1,36 @@
+<!--detail.wxml-->
+<view class="order">
+  	<view class="headtab">
+  		<text class="active">全部</text>
+        <text>代付款</text>
+        <text>待发货</text>
+        <text>待收货</text>
+  	</view>
+    <view class="tabwrap">'
+        <view class="tabitem">
+            <view class="order-item">
+                <view class="title">
+                    <text class="fl">店铺：中国茶叶</text>
+                    <text class="fr cred">等待买家付款</text>
+                </view>
+                <view class="ordernum">订单编号：E201709061739</view>
+                <view class="order-pro">
+                    <image src="{{detailData.imgUrls[0]}}" class="proimage"/>
+                    <view class="title-wrap">
+                        <view class="title-text">新款云创同X7创客智能微信营销手机</view>
+                        <text class="title-price">￥3680</text>
+                    </view>
+                </view>
+                <view class="ordertotal">
+                    <view class="fr">合计：<text>￥69.00</text></view>
+                </view>
+                <view class="paybtn">
+                    <view class="btn pay">付款</view>
+                    <view class="btn">取消</view>
+                </view>
+
+            </view>
+            <view class="nomoreinfo">已经没有更多了~</view>
+        </view>
+    </view>
+</view>

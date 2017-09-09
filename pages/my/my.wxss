@@ -1,0 +1,18 @@
+.my{
+	font-family: arial, "Microsoft Yahei";
+	background: #fafafa
+}
+
+.avatar{
+	height: 128rpx;
+}
+.avatar .label{
+	line-height: 128rpx;
+}
+.avatar image{
+	height: 128rpx;
+	width: 128rpx;
+	float: right;
+	margin-right: 24rpx;
+	border-radius: 50%;
+}

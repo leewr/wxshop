@@ -1,0 +1,21 @@
+/**index.wxss**/
+.indexlist{
+    margin:24rpx;
+}
+.indeximage{
+    margin-bottom: 24rpx;
+    height: calc(62vw - 24rpx);
+    width: calc(100vw - 24rpx);
+}
+.indextitle{
+    font-size: 30rpx;
+    font-weight: bold;
+    line-height: 40rpx;
+    margin-bottom: 24rpx;
+    text-align: left;
+}
+.infofrom{
+    font-size: 24rpx;
+    color: #9c9c9c;
+    margin-bottom: 48rpx;
+}

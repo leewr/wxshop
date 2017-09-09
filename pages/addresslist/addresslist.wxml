@@ -1,0 +1,64 @@
+<!--addresslist.wxml-->
+<view class="addresslist">
+  	<!-- <view class="list">
+      <view class="list-item">
+          <view class="label">收货人</view>
+          <input type="text" placeholder="请输入姓名" />
+      </view>
+      <view class="list-item">
+          <view class="label">联系电话</view>
+          <input type="text" placeholder="" />
+      </view>
+      <view class="list-item">
+          <view class="label">收获地区</view>
+          <picker bindchange="provinceChange" value="{{index}}" range="{{provinceData}}">
+              <view class="picker">
+                 {{provinceData[index]}}
+              </view>
+            </picker>
+            <picker bindchange="cityChange" value="{{cityIndex}}" range="{{cityData}}">
+              <view class="picker">
+                 {{cityData[cityIndex]}}
+              </view>
+            </picker>
+            <picker bindchange="cityChange" value="{{cityIndex}}" range="{{cityData}}">
+              <view class="picker">
+                 {{cityData[cityIndex]}}
+              </view>
+            </picker>
+      </view>
+      <view class="list-item">
+          <view class="label">详细地址</view>
+          <input type="text" placeholder="" />
+      </view>
+      <view class="list-item">
+          <view class="label">邮编</view>
+          <input type="text" placeholder="" />
+      </view>
+    </view>
+    <view class="savebtn">保存</view> -->
+    <view class="address-item">
+        <view class="checked"></view>
+        <view class="con">
+            <view class="c3">李文润，15574311248</view>
+            <view class="c6">收获地址：湖南省长沙市芙蓉区候家塘</view>
+        </view>
+        <view class="edit"></view>
+    </view>
+     <view class="address-item">
+        <view class="checked"></view>
+        <view class="con">
+            <view class="c3">李文润，15574311248</view>
+            <view class="c6">收获地址：湖南省长沙市芙蓉区候家塘</view>
+        </view>
+        <view class="edit"></view>
+    </view>
+    <view class="addressnone">
+        <view class=""></view>
+        <view class="">哎呀，你还沒有收货地址哦~</view>
+    </view>
+    <navigator class="addaddress" url="../address/address">
+        <text class="addicon">+</text>
+        <text class="text">新增收货地址</text>
+    </navigator>
+</view>

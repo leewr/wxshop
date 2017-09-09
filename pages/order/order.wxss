@@ -1,0 +1,91 @@
+.order{
+	background: #fafafa;
+	font-size: 30rpx;
+	height: 100vh
+}
+.headtab{
+	height: 84rpx;
+	border-top: 1px solid #e8e8e8;
+	border-bottom: 1px solid #e8e8e8;
+	background: #fff;
+	display: flex;
+}
+.headtab text{
+	flex: 1;
+	line-height: 84rpx;
+	font-size: 30rpx;
+	text-align: center;
+}
+.headtab text.active{
+	border-bottom: 2px solid #fc5959;
+	color: #fc5959
+}
+.tabitem{
+	
+}
+.order-item{
+	background: #fff;
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+}
+.tabitem .title{
+	padding:25rpx 24rpx 12rpx 24rpx;
+	overflow: hidden;
+}
+.ordernum{
+	font-size: 24rpx;
+	color: #999;
+	padding: 0 24rpx;
+	margin-bottom: 12rpx;
+}
+.order-pro{
+	background: #fafafa;
+	padding: 16rpx 24rpx;
+	overflow: hidden;
+}
+.order-pro .proimage{
+	width: 180rpx;
+	height: 180rpx;
+	float: left;
+}
+.title-wrap{
+	margin-left: 220rpx;
+	font-size: 30rpx;
+	position: relative;
+}
+.title-text{
+	width: calc(100vw - 360rpx)
+}
+.title-price{
+	position: absolute;
+	right: 0;
+	top:0;
+}
+.ordertotal{
+	padding: 0 24rpx;
+	height: 84rpx;
+	line-height: 84rpx;
+	font-size: 30rpx;
+	border-bottom: 1px solid #e8e8e8;
+}
+.paybtn{
+	overflow: hidden;
+	padding: 0 24rpx;
+}
+.paybtn .btn{
+	width:90rpx;
+	height: 60rpx;
+	line-height: 60rpx;
+	text-align: center;
+	background: #fff;
+	border-radius: 6rpx;
+	border: 1px solid #e8e8e8;
+	margin: 20rpx 0 20rpx 20rpx;
+	float: right;
+}
+.paybtn .btn.pay{
+	border-color: #ed5050;
+	color: #fff;
+	border-color: #ed5050;
+	background: #ed5050
+}

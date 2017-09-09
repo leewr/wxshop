@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+    <navigator class="user-motto" url="../detail/detail">购买</navigator>
+  </view> -->
+  <view class="indexlist">
+    <navigator class="index-item" url="../detail/detail">
+      <image src="../../images/2.jpg" class="indeximage"/>
+      <view class="indextitle">清热降火蜂蜜柚子果茶450g 超大片看的见的果肉 索索天天夏季最佳饮品</view>
+      <view class="infofrom">来自： 1号峰龙旗舰店 | 990人已购买</view>
+    </navigator>
+    <navigator class="index-item" url="../detail/detail">
+      <image src="../../images/2.jpg" class="indeximage"/>
+      <view class="indextitle">清热降火蜂蜜柚子果茶450g 超大片看的见的果肉 索索天天夏季最佳饮品</view>
+      <view class="infofrom">来自： 1号峰龙旗舰店 | 990人已购买</view>
+    </navigator>
+  </view>
+</view>

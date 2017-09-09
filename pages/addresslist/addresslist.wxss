@@ -1,0 +1,45 @@
+.addaddress{
+	height: 98rpx;
+	line-height: 98rpx;
+	border-top: 1rpx solid #e8e8e8;
+	line-height: 98rpx;
+	background: #fff;
+	padding: 0 24rpx;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.address-item{
+	border-bottom: 1px solid #e8e8e8;
+	height: 166rpx;
+	position: relative;
+}
+.address-item .checked{
+	width: 36rpx;
+	height: 36rpx;
+	background: #3283fa;
+	border-radius: 50%;
+	position: absolute;
+	left: 24rpx;
+	top:65rpx;
+}
+.address-item .con{
+	padding-top: 20rpx;
+	margin: 0 80rpx;
+	line-height: 60rpx;
+	font-size: 30rpx;
+}
+.edit{
+	position: absolute;
+	right: 24rpx;
+	background: #3283fa;
+	top:62rpx;
+	width: 42rpx;
+	height: 42rpx;
+}
+.addressnone{
+	height: 100vh;
+	text-align: center;
+	vertical-align: middle;
+}

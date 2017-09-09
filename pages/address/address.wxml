@@ -1,0 +1,40 @@
+<!--address.wxml-->
+<view class="address">
+  	<view class="list">
+  		<view class="list-item">
+  				<view class="label">收货人</view>
+  				<input type="text" placeholder="请输入姓名" />
+  		</view>
+  		<view class="list-item">
+  				<view class="label">联系电话</view>
+  				<input type="text" placeholder="" />
+  		</view>
+  		<view class="list-item">
+  				<view class="label">收获地区</view>
+  				<picker bindchange="provinceChange" value="{{index}}" range="{{provinceData}}">
+					<view class="picker">
+					 	{{provinceData[index]}}
+					</view>
+				</picker>
+				<picker bindchange="cityChange" value="{{cityIndex}}" range="{{cityData}}">
+					<view class="picker">
+					 	{{cityData[cityIndex]}}
+					</view>
+				</picker>
+				<picker bindchange="cityChange" value="{{cityIndex}}" range="{{cityData}}">
+					<view class="picker">
+					 	{{cityData[cityIndex]}}
+					</view>
+				</picker>
+  		</view>
+  		<view class="list-item">
+  				<view class="label">详细地址</view>
+  				<input type="text" placeholder="" />
+  		</view>
+  		<view class="list-item">
+  				<view class="label">邮编</view>
+  				<input type="text" placeholder="" />
+  		</view>
+  	</view>
+  	<view class="savebtn">保存</view>
+</view>

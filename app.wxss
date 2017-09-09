@@ -1,0 +1,112 @@
+/**app.wxss**/
+view, text{
+	font-family: arial, "Microsoft Yahei";
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.c3{
+  color: #333;
+}
+.c6{
+  color: #666
+}
+.cred{
+  color:#fc5252
+}
+.pd12{
+	padding:0 12rpx;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.tl{
+	text-align: left;
+}
+.tr{
+	text-align: right;
+}
+.tc{
+	text-align: center;
+}
+.f12{
+	font-size: 24rpx;
+}
+.f14{
+	font-size: 28rpx;
+}
+/* .list{
+    
+}
+.list-item{
+    height: 60rpx;
+    line-height: 60rpx;
+    font-size: 30rpx;
+    border-bottom: 1rpx solid #e8e8e8;
+} */
+.list-item + .list-item{
+    border-bottom: nonne;
+}
+.list{
+    border-top:1rpx solid #e8e8e8;
+    border-bottom: 1rpx solid #e8e8e8;
+    background: #fff;
+    font-size: 30rpx;
+    margin-bottom: 40rpx;
+    vertical-align: middle;
+}
+
+.list-item{
+    height: 60rpx;
+    line-height: 60rpx;
+    padding: 10rpx 0;
+    margin-left: 24rpx;
+    border-bottom: 1rpx solid #e8e8e8;
+}
+.list-item:last-child{
+    border-bottom: none;
+}
+.list-item .label{
+    font-size: 30rpx;
+    width: 180rpx;
+    float: left;
+}
+.list-item .value,.list-item .arraw{
+    float: right;
+    margin-right: 24rpx;
+    color: #999;
+}
+
+.support{
+    height: 200rpx;
+    text-align: center;
+    font-size: 24rpx;
+    color: #999;
+}
+
+/* btn 族 */
+.savebtn{
+  height: 88rpx;
+  margin: 0 24rpx;
+  border-radius: 6rpx;
+  background: #06be04;
+  text-align: center;
+  color: #fff;
+  font-size: 30rpx;
+  line-height: 88rpx;
+}
+.nomoreinfo{
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #999
+}
