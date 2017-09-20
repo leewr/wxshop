@@ -1,0 +1,35 @@
+<!--detail.wxml-->
+<view class="my">
+  	<view class="list">
+		<view class="list-item avatar">
+			<text class="label">头像</text>
+			<image src="{{userInfo.avatarUrl}}" background-size="cover"/>
+		</view>
+  	</view>
+  	<view class="list">
+		<view class="list-item">
+			<text class="label">昵称</text>
+			<text class="value">{{userInfo.nickName}}</text>
+		</view>
+		<view class="list-item">
+			<text class="label">性别</text>
+			<text class="value">{{userInfo.gender}}</text>
+		</view>
+		<view class="list-item">
+			<text class="label">我的收货地址</text>
+			<text class="arraw"></text>
+		</view>
+  	</view>
+  	<view class="list">
+		<view class="list-item">
+			<text class="label">联系客服</text>
+			<text class="arraw"></text>
+		</view>
+  	</view>
+  	<view class="list">
+		<view class="list-item">
+			<text class="label">帮助中心</text>
+			<text class="arraw"></text>
+		</view>
+  	</view>
+</view>

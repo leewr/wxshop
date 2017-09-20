@@ -1,0 +1,37 @@
+/**app.wxss**/
+view, text{
+	font-family: arial, "Microsoft Yahei";
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+.pd12{
+	padding:0 12rpx;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.tl{
+	text-align: left;
+}
+.tr{
+	text-align: right;
+}
+.tc{
+	text-align: center;
+}
+.f12{
+	font-size: 24rpx;
+}
+.f14{
+	font-size: 28rpx;
+}

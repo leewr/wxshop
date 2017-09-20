@@ -1,0 +1,208 @@
+.detail{
+	font-family: arial, "Microsoft Yahei";
+	background: #fafafa
+}
+swiper{
+	background: #fff;
+	width: 100vw;
+	height: 100vw;
+	padding-bottom: 1rpx;
+	border-bottom: 1rpx solid #e8e8e8;
+}
+.slide-image{
+	width: 100vw;
+	height:100vw;
+}
+.detail-hd{
+	background: #fff;
+	border-top:1rpx solid #e8e8e8;
+	border-bottom: 1rpx solid #e8e8e8;
+}
+.detail-bd{
+	padding-bottom: 80rpx;
+}
+.title{
+	margin: 12rpx;
+	font-size: 30rpx;
+}
+.price{
+	margin: 0 12rpx 12rpx 12rpx;
+	text-align: left;
+	font-size: 30rpx;
+	color: red;
+}
+.numwrap{
+	border-top: 1px solid #e8e8e8;
+	height: 60rpx;
+	line-height: 60rpx;
+	font-size: 24rpx;
+	color: #666;
+	position: relative;
+}
+.freight{
+	position: absolute;
+	left: 12rpx;
+	top:0;
+}
+.saleCount{
+	position: absolute;
+	right: 12rpx;
+	top:0;
+	text-align: right;
+}
+
+.serPromise{
+	background: #fff;
+	margin: 24rpx 0;
+	height: 70rpx;
+	line-height: 70rpx;
+	border-top: 1px solid #e8e8e8;
+	border-bottom: 1px solid #e8e8e8;
+	font-size: 24rpx;
+	color: #333;
+}
+
+.descript{
+	
+}
+.descript image{
+	width: calc(100vw - 24rpx);
+}
+.support{
+	height: 100rpx;
+	text-align: center;
+	font-size: 24rpx;
+	color: #999;
+}
+.navigator-wrap{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 80rpx;
+	background: #fff;
+}
+.home{
+	width: 120rpx;
+	height: 80rpx;
+	line-height: 80rpx;
+	color: red;
+	font-size: 24rpx;
+	text-align: center;
+	float: left;
+}
+.tobuy{
+	font-size: 30rpx;
+	text-align: center;
+	margin-left: 120rpx;
+	background: red;
+	color: #fff;
+	line-height: 80rpx;
+	display: block;
+}
+/* layerbuy */
+.layerbuy{
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: rgba(0,0,0,.5);
+}
+.layerbg{
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: rgba(0,0,0,.5);
+	z-index: 1
+}
+.close{
+	position: absolute;
+	width: 40rpx;
+	height: 40rpx;
+	right: 30rpx;
+	top:30rpx;
+	z-index: 3;
+	background: #999;
+}
+.innerbuybox{
+	z-index: 2;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #fff;
+}
+.buybox-hd,.buybox-bd,.buybox-fd{
+	height: 140rpx;
+	margin-left: 30rpx;
+	border-bottom: 1px solid #e8e8e8;
+	position: relative
+}
+.proIndexsrc{
+	position: absolute;
+	left: 0;
+	top: -24rpx;
+	width: 140rpx;
+	height: 140rpx;
+	border-radius: 6rpx;
+	border:2rpx solid #fff;
+}
+.carttitle{
+	margin: 0 100rpx 0 160rpx;
+	padding-top: 12rpx;
+}
+.cartprice{
+	color: red;
+	margin-left: 160rpx;
+}
+.buybox-bd .label,.buybox-fd .label{
+	padding: 16rpx 0;
+	font-size: 30rpx;
+	color: #666;
+}
+.buybox-bd .info{
+	color: #fff;
+	font-size: 24rpx;
+	padding: 6rpx;
+	background: red;
+	border:1px solid #000;
+	border-radius: 4rpx;
+}
+.buybox-fd .label{
+	padding-bottom: 0;
+}
+.buybox-fd .buynum{
+	line-height: 30rpx;
+}
+.oprnum{
+	position: absolute;
+	right: 30rpx;
+	top:40rpx;
+	font-size: 24rpx;
+}
+.oprnum text{
+	height: 50rpx;
+	line-height: 50rpx;
+	width: 70rpx;
+	display: inline-block;
+	border:1rpx solid #999;
+	text-align: center;
+}
+.oprnum text + text{
+	margin-left: -1rpx;
+}
+.oprnum text.forbid{
+	border-color: #e0e0e0;
+	color: #b2b2b2;
+	background: #e8e8e8
+}
+.nextstep{
+	height: 80rpx;
+	background: red;
+	color: #fff;
+	line-height: 80rpx;
+	text-align: center;
+}

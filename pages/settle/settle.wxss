@@ -1,0 +1,61 @@
+.settle{
+	background: #fafafa;
+}
+.newaddress{
+	height: 60rpx;
+	padding: 40rpx 24rpx;
+	border-bottom: 4rpx solid blue;
+	background: #fff;
+	font-size: 30rpx;
+}
+.addicon{
+	width: 60rpx;
+	height: 60rpx;
+	line-height: 60rpx;
+	display: block;
+	background: #3283fa;
+	border-radius: 8rpx;
+	color: #fff;
+	text-align: center;
+	float: left;
+}
+.newaddress .text{
+	float: left;
+	line-height: 60rpx;
+	margin-left: 14rpx;
+}
+.order-detail{
+	margin-top: 24rpx;
+	background: #fff;
+	border-top: 1rpx solid #e8e8e8;
+	border-bottom: 1rpx solid #e8e8e8;
+	padding: 0 24rpx;
+}
+.order-detail .title{
+	height: 100rpx;
+	line-height: 100rpx;
+	background: #fff;
+	font-size: 30rpx;
+}
+.order-detail .order-pro{
+	background: #fafafa;
+	padding: 16rpx 0;
+}
+.order-detail .order-pro .proimage{
+	width: 180rpx;
+	height: 180rpx;
+	float: left;
+}
+.title-wrap{
+	margin-left: 220rpx;
+	font-size: 30rpx;
+	position: relative;
+}
+.title-text{
+	width: calc(100vw - 360rpx)
+}
+.title-price{
+	position: absolute;
+	right: 0;
+	top:0;
+}

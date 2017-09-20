@@ -1,0 +1,41 @@
+<!--detail.wxml-->
+<view class="settle">
+  	<view class="newaddress">
+		<view class="label"><text class="addicon">+</text><text class="text">新增收货地址</text></view>
+  	</view>
+  	<view class="order-detail">
+		<view class="title">云创同官方旗舰店</view>
+		<view class="order-pro">
+			<image src="" class="proimage"/>
+			<view class="title-wrap">
+				<view class="title-text">新款云创同X7创客智能微信营销手机</view>
+				<text class="title-price">￥3680</text>
+			</view>
+			
+			<!-- <view class="describe"></view> -->
+		</view>
+		<!-- <view class="number">
+			<view class="">
+				<view class="label">数量</view>
+				<view class="oprnum">
+					<text class="reduce forbid" bindtap="reduceNum">-</text>
+					<text class="curnum">{{buynum}}</text>
+					<text class="plus" bindtap="plusNum">+</text>
+				</view>
+			</view>
+		</view> -->
+		<view class="freight">
+			<view class="label">配送方式</view>
+			<view class="">
+				<view>免运费</view>
+				<view>快递发货</view>
+			</view>
+		</view>
+		<view class="message">
+			<view class="label">买家留言：</view>
+		</view>
+		<view class="message">
+			<view class="label">合计</view>
+		</view>
+  	</view>
+</view>
