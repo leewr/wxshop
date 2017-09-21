@@ -43,6 +43,13 @@ view, text{
 .f14{
 	font-size: 28rpx;
 }
+.f30{
+  font-size: 30rpx;
+}
+.f48{
+  line-height:48rpx;
+  font-size: 48rpx;
+}
 /* .list{
     
 }

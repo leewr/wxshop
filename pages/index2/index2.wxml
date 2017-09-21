@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<view class="container">
+  <image class="Advertising" src="../../images/index.jpg"></image>
+  <image class="quotes f48" src="../../images/lq.png"></image>
+  <view class="f14">Better Late Than Never</view>
+  <view class="f14">迟到总比没有</view>
+  <view class="f14">颜色比正红还要鸿，就像火热的爱！</view>
+  <image class="quotesR f30" src="../../images/rq.png">”</image>
+  <view class='recommend'>recommend</view>
+  <view class="recommentcn">
+    <text class="recommentcntext">本期推荐</text>
+  </view>
+  <view class="reommendlist">
+    <view class="recommendinwrap">
+      <navigator class="reommendlistitem fl">
+        <image class="indeximage" src="../../images/2.jpg"></image>
+        <view>淑女杀手(16支)</view>
+        <view class='grey'>经典红色枪炮玫瑰</view>
+        <view class='price'>299.00</view>
+      </navigator>
+      <navigator class="reommendlistitem fr">
+        <image class="indeximage" src="../../images/2.jpg"></image>
+        <view>淑女杀手(16支)</view>
+        <view class='grey'>经典红色枪炮玫瑰</view>
+        <view class='price'>299.00</view>
+      </navigator>
+      <navigator class="reommendlistitem fl">
+        <image class="indeximage" src="../../images/2.jpg"></image>
+        <view>淑女杀手(16支)</view>
+        <view class='grey'>经典红色枪炮玫瑰</view>
+        <view class='price'>299.00</view>
+      </navigator>
+      <navigator class="reommendlistitem fr">
+        <image class="indeximage" src="../../images/2.jpg"></image>
+        <view>淑女杀手(16支)</view>
+        <view class='grey'>经典红色枪炮玫瑰</view>
+        <view class='price'>299.00</view>
+      </navigator>
+    </view>
+  </view>
+</view>

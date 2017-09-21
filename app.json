@@ -1,6 +1,6 @@
 {
   "pages":[
-    "pages/index/index",
+    "pages/index2/index2",
     "pages/logs/logs",
     "pages/detail/detail",
     "pages/my/my",
@@ -19,7 +19,7 @@
     "color": "#4e4e4e",
     "selectedColor": "#ff4444",
     "list": [{
-      "pagePath": "pages/index/index",
+      "pagePath": "pages/index2/index2",
       "iconPath": "images/home.png",
       "selectedIconPath": "images/home-active.png",
       "text": "首页"
