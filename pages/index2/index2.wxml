@@ -12,25 +12,25 @@
   </view>
   <view class="reommendlist">
     <view class="recommendinwrap">
-      <navigator class="reommendlistitem fl">
+      <navigator class="reommendlistitem fl" url="../detail/detail">
         <image class="indeximage" src="../../images/2.jpg"></image>
         <view>淑女杀手(16支)</view>
         <view class='grey'>经典红色枪炮玫瑰</view>
         <view class='price'>299.00</view>
       </navigator>
-      <navigator class="reommendlistitem fr">
+      <navigator class="reommendlistitem fr" url="../detail/detail">
         <image class="indeximage" src="../../images/2.jpg"></image>
         <view>淑女杀手(16支)</view>
         <view class='grey'>经典红色枪炮玫瑰</view>
         <view class='price'>299.00</view>
       </navigator>
-      <navigator class="reommendlistitem fl">
+      <navigator class="reommendlistitem fl" url="../detail/detail">
         <image class="indeximage" src="../../images/2.jpg"></image>
         <view>淑女杀手(16支)</view>
         <view class='grey'>经典红色枪炮玫瑰</view>
         <view class='price'>299.00</view>
       </navigator>
-      <navigator class="reommendlistitem fr">
+      <navigator class="reommendlistitem fr" url="../detail/detail">
         <image class="indeximage" src="../../images/2.jpg"></image>
         <view>淑女杀手(16支)</view>
         <view class='grey'>经典红色枪炮玫瑰</view>

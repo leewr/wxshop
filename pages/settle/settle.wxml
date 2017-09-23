@@ -6,22 +6,12 @@
   	<view class="order-detail">
 		<view class="title">云创同官方旗舰店</view>
 		<view class="order-pro">
-			<image src="{{detailData.imgUrls[0]}}" class="proimage"/>
+			<image src="" class="proimage"/>
 			<view class="title-wrap">
 				<view class="title-text">新款云创同X7创客智能微信营销手机</view>
 				<text class="title-price">￥3680</text>
 			</view>
 		</view>
-		<!-- <view class="number">
-			<view class="">
-				<view class="label">数量</view>
-				<view class="oprnum">
-					<text class="reduce forbid" bindtap="reduceNum">-</text>
-					<text class="curnum">{{buynum}}</text>
-					<text class="plus" bindtap="plusNum">+</text>
-				</view>
-			</view>
-		</view> -->
 		<view class="freight">
 			<view class="freight-item">
 				<view class="label">配送方式</view>
@@ -79,5 +69,4 @@
 		</view>
 		<text class="totalprice fr">合计:<text class="num">￥45.80</text></text>
 	</view>
-
 </view>

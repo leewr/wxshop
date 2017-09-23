@@ -68,7 +68,12 @@ swiper{
 .descript image{
 	width: calc(100vw - 24rpx);
 }
-
+.support{
+	height: 100rpx;
+	text-align: center;
+	font-size: 24rpx;
+	color: #999;
+}
 .navigator-wrap{
 	position: fixed;
 	bottom: 0;
