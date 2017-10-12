@@ -1,15 +1,15 @@
 {
 	"description": "项目配置文件。",
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true
 	},
 	"compileType": "weapp",
 	"libVersion": "1.5.4",
-	"appid": "touristappid",
-	"projectname": "%E6%B5%8B%E8%AF%95wxshop",
+	"appid": "wxa7af23f88b267a5d",
+	"projectname": "flower",
 	"condition": {
 		"weapp": {
 			"current": -1,

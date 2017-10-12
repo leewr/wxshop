@@ -7,13 +7,20 @@ App({
     wx.setStorageSync('logs', logs)
     wx.login({
       success: function(res) {
-        console.log(res)
+        console.log(res.code)
         if (res.code) {
-          //发起网络请求
+          //登录
           wx.request({
-            url: 'https://test.com/onLogin',
+            url: 'http://47.90.38.178:8080/wx_shop_test/user/login.do',
+            header: {
+              'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            method: 'POST',
             data: {
               code: res.code
+            },
+            success: function (res) {
+              console.log(res)
             }
           })
         } else {
