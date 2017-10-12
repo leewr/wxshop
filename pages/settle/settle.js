@@ -4,26 +4,184 @@ var detailData = apiData.detail()
 Page({
   data: {
     detailData: detailData.data,
-    userInfo: {}
+    userInfo: {},
+    shippingId: 0,
+    addressChoice: false,
+    addressLength: 0
   },
-  //事件处理函数
+  /*//事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
       url: '../logs/logs'
     })
-  },
-  onLoad: function () {
-    console.log('onLoad')
+  },*/
+  onLoad: function (options) {
+    console.log('settle')
     var that = this
-    //调用应用实例的方法获取全局数据
-    app.getUserInfo(function(userInfo){
-      if(userInfo.gender == 1){
-        userInfo.gender = '男'
+    console.log(options)
+    // 订单页产品信息
+    // 获取详细产品数据
+    wx.request({
+      url: 'http://47.90.38.178:8080/wx_shop_test/product/detail.do',
+      header: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      method: 'POST',
+      data: {
+        productId: options.productId
+      },
+      success: function (obj) {
+        console.log(obj)
+        if (obj.data.status === 0) {
+          that.setData({
+            imgUrls: obj.data.data.subImages.split(',')
+          })
+          console.log(obj.data.data.detail)
+          obj.data.data.detail = obj.data.data.detail.replace(/width=\"?(\d*)\"?/g,"width='100%'")
+          obj.data.data.detail = obj.data.data.detail.replace(/height=\"?(\d*)\"?/g,"height='auto'")
+          that.setData({
+            detailData: obj.data.data
+          })
+          console.log(detailData)
+        }
+      },
+      fail (obj) {
+
       }
-      //更新数据
-      that.setData({
-        userInfo:userInfo
-      })
     })
+    
+    //收货地址列表
+    wx.request({
+      url: 'http://47.90.38.178:8080/wx_shop_test/shipping/list.do',
+      header: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      method: 'POST',
+      data: {
+        pageNum: 1,
+        pageSize: 10
+      },
+      success: function (obj) {
+        console.log(obj.data.data.list.length)
+        if (obj.data.data.list.length > 1) {
+          that.setData({
+            addressLength: obj.data.data.list.length
+          })
+        } else {
+          that.setData({
+            addressLength: 0
+          })
+        }
+      },
+      fail (obj) {
+
+      }
+    })
+  },
+  createOrder () {
+    if (!this.data.addressChoice) {
+      wx.showModal({
+        content: '请填写收货地址',
+        showCancel: false
+      })
+      return false
+    }
+    // 创建订单
+    wx.request({
+      url: 'http://47.90.38.178:8080/wx_shop_test/product/detail.do',
+      header: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      method: 'POST',
+      data: {
+        shippingId: options.id
+      },
+      success: function (obj) {
+        console.log(obj)
+        if (obj.data.status === 0) {
+          that.setData({
+            imgUrls: obj.data.data.subImages.split(',')
+          })
+          console.log(obj.data.data.detail)
+          obj.data.data.detail = obj.data.data.detail.replace(/width=\"?(\d*)\"?/g,"width='100%'")
+          obj.data.data.detail = obj.data.data.detail.replace(/height=\"?(\d*)\"?/g,"height='auto'")
+          that.setData({
+            detailData: obj.data.data
+          })
+          that.data
+        }
+      },
+      fail (obj) {
+
+      }
+    })
+  },
+  addressjudge () {
+    if (!this.data.addressLength) {
+      // 发起授权
+      console.log(1)
+      wx.getSetting({
+        success(res) {
+            console.log(res)
+            if (!res.authSetting['scope.address']) {
+                wx.authorize({
+                    scope: 'scope.address',
+                    success() {
+                        // 选择收货地址
+                        wx.chooseAddress({
+                          success: function (res) {
+                            console.log(res.userName)
+                            console.log(res.postalCode)
+                            console.log(res.provinceName)
+                            console.log(res.cityName)
+                            console.log(res.countyName)
+                            console.log(res.detailInfo)
+                            console.log(res.nationalCode)
+                            console.log(res.telNumber)
+                          }
+                        })
+                    },
+                    fail() {
+                      // 授权失败调用自定义
+                      wx.navigateTo({
+                        url: '/pages/address/address'
+                      })
+                    }
+                })
+            }
+        },
+        fail(res) {
+          console.log(res)
+           wx.authorize({
+              scope: 'scope.address',
+              success() {
+                  // 选择收货地址
+                  wx.chooseAddress({
+                    success: function (res) {
+                      console.log(res.userName)
+                      console.log(res.postalCode)
+                      console.log(res.provinceName)
+                      console.log(res.cityName)
+                      console.log(res.countyName)
+                      console.log(res.detailInfo)
+                      console.log(res.nationalCode)
+                      console.log(res.telNumber)
+                    }
+                  })
+              },
+              fail() {
+                // 授权失败调用自定义
+                wx.navigateTo({
+                  url: '/pages/address/address'
+                })
+              }
+          })
+        }
+    })      
+    } else {
+      wx.navigateTo({
+        url: '/pages/addresslist/addresslist'
+      })
+    }
   }
 })

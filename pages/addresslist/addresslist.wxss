@@ -18,7 +18,6 @@
 .address-item .checked{
 	width: 36rpx;
 	height: 36rpx;
-	background: #3283fa;
 	border-radius: 50%;
 	position: absolute;
 	left: 24rpx;
@@ -33,7 +32,6 @@
 .edit{
 	position: absolute;
 	right: 24rpx;
-	background: #3283fa;
 	top:62rpx;
 	width: 42rpx;
 	height: 42rpx;

@@ -3,38 +3,38 @@
   	<view class="list">
   		<view class="list-item">
   				<view class="label">收货人</view>
-  				<input type="text" placeholder="请输入姓名" />
+  				<input type="text" bindinput="inputName" placeholder="请输入姓名" value="{{receiverName}}" />
   		</view>
   		<view class="list-item">
   				<view class="label">联系电话</view>
-  				<input type="text" placeholder="" />
+  				<input type="text" bindinput="inputPhone" placeholder="" value="{{receiverPhone}}"/>
   		</view>
   		<view class="list-item">
   				<view class="label">收获地区</view>
-  				<picker bindchange="provinceChange" value="{{index}}" range="{{provinceData}}">
-					<view class="picker">
-					 	{{provinceData[index]}}
-					</view>
-				</picker>
-				<picker bindchange="cityChange" value="{{cityIndex}}" range="{{cityData}}">
-					<view class="picker">
-					 	{{cityData[cityIndex]}}
-					</view>
-				</picker>
-				<picker bindchange="cityChange" value="{{cityIndex}}" range="{{cityData}}">
-					<view class="picker">
-					 	{{cityData[cityIndex]}}
-					</view>
-				</picker>
+  				<picker bindchange="provinceChange" value="{{index}}" range="{{receiverProvince}}">
+  					<view class="picker">
+  					 	{{provinceData[index]}}
+  					</view>
+  				</picker>
+  				<picker bindchange="cityChange" value="{{cityIndex}}" range="{{cityData}}">
+  					<view class="picker">
+  					 	{{cityData[cityIndex]}}
+  					</view>
+  				</picker>
+  				<picker bindchange="cityChange" value="{{cityIndex}}" range="{{cityData}}">
+  					<view class="picker">
+  					 	{{cityData[cityIndex]}}
+  					</view>
+  				</picker>
   		</view>
   		<view class="list-item">
   				<view class="label">详细地址</view>
-  				<input type="text" placeholder="" />
+  				<input type="text" bindinput="inputAddress" placeholder="" value="{{receiverAddress}}" />
   		</view>
   		<view class="list-item">
   				<view class="label">邮编</view>
-  				<input type="text" placeholder="" />
+  				<input type="text" bindinput="inputZip" placeholder="" value="{{receiverZip}}"/>
   		</view>
   	</view>
-  	<view class="savebtn">保存</view>
+  	<view class="savebtn" bindtap="addaddress">保存</view>
 </view>

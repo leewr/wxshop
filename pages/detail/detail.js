@@ -1,20 +1,46 @@
-// var request = require('../../utils/request.js')
-var apiData = require('../../api/detail.js');
-var detailData = apiData.detail()
 Page({
   data: {
-  	detailData: detailData.data,
-    indicatorDots: true,
-    autoplay: false,
-    interval: 5000,
-    duration: 1000,
-    buynum: 1,
-    cartbox: false
+  	detailData: '',
+    id: '',
+    imgUrls: '',
+    buynum: 1
   },
-  onLoad: function () {
+  onLoad: function (options) {
     console.log('onLoad')
     var that = this
-   	
+   	console.log(options)
+    this.setData({
+      id: options.id
+    })
+    // 获取详细产品数据
+    wx.request({
+      url: 'http://47.90.38.178:8080/wx_shop_test/product/detail.do',
+      header: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      method: 'POST',
+      data: {
+        productId: options.id
+      },
+      success: function (obj) {
+        console.log(obj)
+        if (obj.data.status === 0) {
+          that.setData({
+            imgUrls: obj.data.data.subImages.split(',')
+          })
+          console.log(obj.data.data.detail)
+          obj.data.data.detail = obj.data.data.detail.replace(/width=\"?(\d*)\"?/g,"width='100%'")
+          obj.data.data.detail = obj.data.data.detail.replace(/height=\"?(\d*)\"?/g,"height='auto'")
+          that.setData({
+            detailData: obj.data.data
+          })
+          that.data
+        }
+      },
+      fail (obj) {
+
+      }
+    })
   },
   preventDefaultEvent: function (e) {
   	// console.log(e)

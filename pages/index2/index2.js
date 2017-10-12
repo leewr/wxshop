@@ -3,8 +3,8 @@
 var app = getApp()
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {}
+    userInfo: {},
+    indexList: ''
   },
   //事件处理函数
   bindViewTap: function() {
@@ -21,6 +21,27 @@ Page({
       that.setData({
         userInfo:userInfo
       })
+    })
+    // 获取分类数据
+    wx.request({
+      url: 'http://47.90.38.178:8080/wx_shop_test/product/list.do',
+      header: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      method: 'POST',
+      data: {
+        categoryId: '100001'
+      },
+      success: function (obj) {
+        console.log(obj.data.data.list)
+        that.setData({
+          indexList:obj.data.data.list
+        })
+        console.log(that.data.indexList.length)
+      },
+      fail (obj) {
+
+      }
     })
   }
 })

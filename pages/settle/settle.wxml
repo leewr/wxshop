@@ -1,15 +1,15 @@
 <!--detail.wxml-->
 <view class="settle">
-  	<navigator  url="../address/address" class="newaddress">
-		<view class="label"><text class="addicon">+</text><text class="text">新增收货地址</text></view>
-  	</navigator>
+  	<view class="newaddress" bindtap="addressjudge">
+		<view class="label"><text class="addicon">+</text><text class="text">选择收货地址</text></view>
+  	</view>
   	<view class="order-detail">
 		<view class="title">云创同官方旗舰店</view>
 		<view class="order-pro">
-			<image src="" class="proimage"/>
+			<image src="{{detailData.imageHost}}{{imgUrls[0]}}" class="proimage"/>
 			<view class="title-wrap">
-				<view class="title-text">新款云创同X7创客智能微信营销手机</view>
-				<text class="title-price">￥3680</text>
+				<view class="title-text">{{detailData.name}}</view>
+				<text class="title-price">￥{{detailData.price}}</text>
 			</view>
 		</view>
 		<view class="freight">
@@ -20,12 +20,12 @@
 					<view>快递发货</view>
 				</view>
 			</view>
-			<view class="freight-item">
+			<!-- <view class="freight-item">
 				<label class="message">
 					<view class="label">买家留言:</view>
 					<input class="input" type="text" placeholder="点击给商家留言" />
 				</label>
-			</view>
+			</view> -->
 			<view class="freight-item">
 				<label class="message">
 					<view class="label">合计</view>
@@ -35,21 +35,21 @@
 		</view>
 
   	</view>
-  	<view class="list discount">
-	  	<view class=" list-item">
-			<text class="label">优惠</text>
-			<text class="arrawtext">
-				<text>使用优惠</text>
-				<text class="arraw"></text>
-			</text>
-		</view>
-	</view>
-	<view class="list messagenotice">
+  	<!-- <view class="list discount">
+  		  	<view class=" list-item">
+  				<text class="label">优惠</text>
+  				<text class="arrawtext">
+  					<text>使用优惠</text>
+  					<text class="arraw"></text>
+  				</text>
+  			</view>
+  		</view> -->
+	<!-- <view class="list messagenotice">
 		<view class="list-item">
 			<text class="label">短信通知收件人</text>
 			<switch checked class="mesnotswitch"/>
 		</view>
-	</view>
+	</view> -->
 	<view class="acount list">
 		<view class="">
 			<label>商品金额</label>
@@ -64,7 +64,7 @@
 		<view class="">提供技术支持</view>
 	</view>
 	<view class="total">
-		<view class="totlebtn">
+		<view class="totlebtn"  bindtap="createOrder">
 			提交订单
 		</view>
 		<text class="totalprice fr">合计:<text class="num">￥45.80</text></text>

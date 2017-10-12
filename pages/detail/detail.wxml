@@ -2,15 +2,15 @@
 <view class="detail">
   	<swiper indicator-dots="{{indicatorDots}}"
 	  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-	  <block wx:for="{{detailData.imgUrls}}">
+	  <block wx:for="{{imgUrls}}">
 	    <swiper-item>
-	      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+	      <image src="{{detailData.imageHost}}{{item}}" class="slide-image" width="355" height="150"/>
 	    </swiper-item>
 	  </block>
 	</swiper>
 	<view class="detail-hd">
 		<view class="title">
-			<text>{{detailData.title}}</text>
+			<text>{{detailData.name}}</text>
 		</view>
 		<view class="price">
 			￥{{detailData.price}}
@@ -27,7 +27,7 @@
 			<text>担保交易</text>
 		</view>
 		<view class="descript pd12">
-			<image src="../../images/1.jpg" mode="widthFix"></image>
+			<rich-text nodes="{{detailData.detail}}" bindtap="tap"></rich-text>
 		</view>
 		<view class="support">
 			<view class="">提供技术支持</view>
@@ -40,26 +40,27 @@
 	<view class="layerbuy" wx:if="{{cartbox}}">
 		<view class="layerbg" bindtap="hideCart" catchtouchmove="preventDefaultEvent"></view>
 		<view class="innerbuybox" catchtouchmove="preventDefaultEvent">
-			<view class="close" bindtap="hideCart"></view>
+			<!-- <view class="close" bindtap="hideCart"></view> -->
+			<image src="/images/close.png" class="close" bindtap="hideCart" />
 			<view class="buybox-hd">
-				<image class="proIndexsrc" src="{{detailData.imgUrls[0]}}" />
-				<view class="f12 carttitle">{{detailData.title}}</view>
+				<image class="proIndexsrc" src="{{detailData.imageHost}}{{imgUrls[0]}}" />
+				<view class="f12 carttitle">{{detailData.name}}</view>
 				<view class="f12 cartprice">￥{{detailData.price}}</view>
 			</view>
-			<view class="buybox-bd">
+			<!-- <view class="buybox-bd">
 				<view class="label">规格：</view>
 				<view class=""><text class="info">A款月光宝盒 8枚海鸭蛋黄酥月饼</text></view>
-			</view>
+			</view> -->
 			<view class="buybox-fd">
 				<view class="label">购买数量：</view>
-				<view class="buynum"><text class="f12">剩余{{detailData.amount}}件</text></view>
+				<view class="buynum"><text class="f12">剩余{{detailData.stock}}件</text></view>
 				<view class="oprnum">
 					<text class="reduce forbid" bindtap="reduceNum">-</text>
 					<text class="curnum">{{buynum}}</text>
 					<text class="plus" bindtap="plusNum">+</text>
 				</view>
 			</view>
-			<navigator class="nextstep f14" url="../settle/settle">下一步</navigator>
+			<navigator class="nextstep f14" url="../settle/settle?productId={{id}}&num={{buynum}}">下一步</navigator>
 		</view>
 	</view>
 </view>

@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-  <image class="Advertising" src="../../images/index.jpg"></image>
+  <image class="Advertising" src="../../images/index.jpg" mode="widthFix"></image>
   <image class="quotes f48" src="../../images/lq.png"></image>
   <view class="f14">Better Late Than Never</view>
   <view class="f14">迟到总比没有</view>
@@ -12,29 +12,11 @@
   </view>
   <view class="reommendlist">
     <view class="recommendinwrap">
-      <navigator class="reommendlistitem fl" url="../detail/detail">
-        <image class="indeximage" src="../../images/2.jpg"></image>
-        <view>淑女杀手(16支)</view>
-        <view class='grey'>经典红色枪炮玫瑰</view>
-        <view class='price'>299.00</view>
-      </navigator>
-      <navigator class="reommendlistitem fr" url="../detail/detail">
-        <image class="indeximage" src="../../images/2.jpg"></image>
-        <view>淑女杀手(16支)</view>
-        <view class='grey'>经典红色枪炮玫瑰</view>
-        <view class='price'>299.00</view>
-      </navigator>
-      <navigator class="reommendlistitem fl" url="../detail/detail">
-        <image class="indeximage" src="../../images/2.jpg"></image>
-        <view>淑女杀手(16支)</view>
-        <view class='grey'>经典红色枪炮玫瑰</view>
-        <view class='price'>299.00</view>
-      </navigator>
-      <navigator class="reommendlistitem fr" url="../detail/detail">
-        <image class="indeximage" src="../../images/2.jpg"></image>
-        <view>淑女杀手(16支)</view>
-        <view class='grey'>经典红色枪炮玫瑰</view>
-        <view class='price'>299.00</view>
+      <navigator class="reommendlistitem" url="../detail/detail?id={{itemName.id}}"  wx:for="{{indexList}}" wx:for-index="idx" wx:for-item="itemName"  data="{{itemName.id}}">
+        <image class="indeximage" src="{{itemName.imageHost}}{{itemName.mainImage}}"></image>
+        <view>{{itemName.name}}</view>
+        <view class='grey'>{{itemName.subtitle}}</view>
+        <view class='price'>{{itemName.price}}</view>
       </navigator>
     </view>
   </view>

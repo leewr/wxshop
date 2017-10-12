@@ -69,10 +69,19 @@
     font-size: 24rpx;
     text-align: left;
     margin-bottom:36rpx;
+    float:left;
+}
+.reommendlistitem:nth-of-type(2n){
+    float: right;
+
+}
+.reommendlistitem{
+    width: calc(50vw - 36rpx)
 }
 .indeximage{
     width: calc(50vw - 36rpx);
     height: calc(50vw - 36rpx);
+    overflow: hidden;
 }
 .reommendlistitem .grey{
   color: #9c9c9c;
