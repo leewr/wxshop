@@ -1,0 +1,75 @@
+﻿用户登陆（get）：http://localhost:8080/wx_shop_test//user/loginAdmin.do?username=admin&password=123456
+用户登陆（post）：http://localhost:8080/wx_shop_test//user/login.do?username=admin&password=123456
+退出登陆 （post）：logout.do
+注册（post）：register.do
+注册校验post：check_valid.do
+用户个人信息post：get_user_info.do    get_information.do
+通过密保问题找回密码:forget_get_question.do
+密保问题答案验证:forget_check_answer
+密保问题重置密码：forget_reset_password
+个人中心重置密码：reset_password
+修改个人信息：update_information
+
+
+家用电器分类：http://localhost:8080/wx_shop_test/product/list.do?categoryId=100001
+产品详细：http://localhost:8080/wx_shop_test/product/detail.do?productId=26		
+	
+	
+我的购物车: /cart/list.do  （多返回是否选中，判断库存数量）
+添加购物车			/cart/add.do?productId=&count=
+修改购物车			/cart/update.do?productId=&count=
+批量删除    /cart/delete_product?productIds=   (多产品以,分割)
+购物车所有商品总数  /cart/get_cart_product_count
+全选中 /cart/select_all
+全取消选中 /cart/un_select_all
+单选中  /cart/select?productId
+单取消/cart/un_select?productId
+
+
+添加收件地址 ；/shipping/add.do?shipping实体
+删除收件地址: /shipping/del.do?shippingId=
+修改收件地址：/shipping/update.do？shipping实体
+查看收件地址: /shipping/select.do?shippingId=
+查看收件地址列表: /shipping/list.do?pageNum=&pageSize=(不填默认前十条)
+
+
+创建订单: /order/create.do?shippingId= (貌似是购物车总订单)
+ 我的订单:http://localhost:8080/wx_shop_test/order/list.do
+ 订单详细：http://localhost:8080/wx_shop_test/order/detail.do?orderNo=1492091141269
+ 取消订单：http://localhost:8080/wx_shop_test/order/cancel.do?orderNo=1492091110004（更改订单状态）支付或取消
+ 我的购物车：http://localhost:8080/wx_shop_test/order/get_order_cart_product.do（/cart/list.do区别）
+ 
+ 
+ 
+ 
+
+后台：
+
+登陆POST /manage/user/login.do？username=&password=
+
+
+后台添加产品  /manage/product/save.do?product实体
+修改产品销售状态  /manage/product/set_sale_status.do？productId=&status=
+查看产品详情 /manage/product/detail.do？productId=
+产品详情列表  /manage/product/list.do？pageNum=&pageSize=(不填默认前十条)
+搜索  /manage/product/search.do？productName=&productId=&pageNum=&pageSize=(不填默认前十条)productName、productId一个或多个
+上传   upload.do？upload_file
+上传图片  richtext_img_upload.do？
+
+
+查看订单   /manage/order/list.do?pageNum=&pageSize=(不填默认前十条)
+详细     detail.do？orderNo=
+搜索     search.do？orderNo=&pageNum=&pageSize=
+ 发货     send_goods.do？orderNo
+ 
+ 
+增加分类 /manage/category/add_category.do?categoryName=&parentId=（分类名字和父类id）
+修改分类名称   set_category_name.do?categoryId=&categoryName=
+获取下级分类   get_category.do?categoryId=
+获取当前id和下级所有分类id  get_deep_category.do？categoryId=
+
+
+
+id  wxa7af23f88b267a5d
+
+花店小程序 wxa81721639c7b6439   65fea0cf49fb7d2d83fb409955db839b
