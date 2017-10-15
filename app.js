@@ -5,7 +5,7 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-    wx.login({
+   /* wx.login({
       success: function(res) {
         console.log(res.code)
         if (res.code) {
@@ -20,14 +20,16 @@ App({
               code: res.code
             },
             success: function (res) {
-              console.log(res)
+              if (res.data.status === 0) {
+                this.globalData.sessionid = res.data.data
+              }
             }
           })
         } else {
           console.log('获取用户登录态失败！' + res.errMsg)
         }
       }
-    });
+    });*/
   },
 
   getUserInfo: function(cb) {
@@ -47,6 +49,7 @@ App({
   },
 
   globalData: {
-    userInfo: null
+    userInfo: null,
+    sessionid: null
   }
 })
