@@ -7,7 +7,16 @@ Page({
     userInfo: {},
     shippingId: 0,
     addressChoice: false,
-    addressLength: 0
+    addressLength: 0,
+    address: {
+      userName: app.globalData.address.userName,
+      postalCode: app.globalData.address.postalCode,
+      provinceName: app.globalData.address.provinceName,
+      cityName: app.globalData.address.cityName,
+      detailInfo: app.globalData.address.detailInfo,
+      nationalCode: app.globalData.address.nationalCode,
+      telNumber: app.globalData.address.telNumber
+    }
   },
   /*//事件处理函数
   bindViewTap: function() {
@@ -18,6 +27,7 @@ Page({
   onLoad: function (options) {
     console.log('settle')
     var that = this
+
     console.log(options)
     // 订单页产品信息
     // 获取详细产品数据
@@ -117,6 +127,7 @@ Page({
     })
   },
   addressjudge () {
+    var that = this
     if (!this.data.addressLength) {
       // 发起授权
       console.log(1)
@@ -130,6 +141,15 @@ Page({
                         // 选择收货地址
                         wx.chooseAddress({
                           success: function (res) {
+                            wx.setStorageSync('address', res)
+                            /* app.globalData.address.userName = res.userName
+                            app.globalData.address.postalCode = res.postalCode
+                            app.globalData.address.provinceName = res.provinceName
+                            app.globalData.address.cityName = res.cityName
+                            app.globalData.address.countyName = res.countyName
+                            app.globalData.address.detailInfo = res.detailInfo
+                            app.globalData.address.nationalCode = res.nationalCode
+                            app.globalData.address.telNumber = res.telNumber
                             console.log(res.userName)
                             console.log(res.postalCode)
                             console.log(res.provinceName)
@@ -137,7 +157,7 @@ Page({
                             console.log(res.countyName)
                             console.log(res.detailInfo)
                             console.log(res.nationalCode)
-                            console.log(res.telNumber)
+                            console.log(res.telNumber)*/
                           }
                         })
                     },

@@ -1,7 +1,14 @@
 <!--detail.wxml-->
 <view class="settle">
-  	<view class="newaddress" bindtap="addressjudge">
+  	<view class="newaddress" bindtap="addressjudge" wx:if="{{!addressChoice}}">
 		<view class="label"><text class="addicon">+</text><text class="text">选择收货地址</text></view>
+  	</view>
+  	<view class="addresschoosed" wx:if="{{addressChoice}}">
+		<view class="view">
+			<text class="fl">收货人: {{address.userName}}</text>
+			<text class="fr">{{address.telNumber}}</text>
+		</view>
+		<view class="detail">收货地址{{address.provinceName}}{{address.cityName}}{{address.detailInfo}}</view>
   	</view>
   	<view class="order-detail">
 		<view class="title">云创同官方旗舰店</view>

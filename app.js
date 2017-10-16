@@ -50,6 +50,15 @@ App({
 
   globalData: {
     userInfo: null,
-    sessionid: null
+    sessionid: null,
+    address: {
+      userName: '',
+      postalCode: '',
+      provinceName: '',
+      cityName: '',
+      detailInfo: '',
+      nationalCode: '',
+      telNumber: ''
+    }
   }
 })
